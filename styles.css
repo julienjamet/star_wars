@@ -1,0 +1,242 @@
+@charset "UTF-8";
+.main_page {
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #262520;
+}
+
+.main_page a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.main_page a:hover {
+  font-size: 105%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main_page .light {
+  color: white;
+  background-color: green;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.main_page .light:hover {
+  -webkit-box-shadow: 4px 4px 10px white, -4px -4px 10px white;
+          box-shadow: 4px 4px 10px white, -4px -4px 10px white;
+}
+
+.main_page .dark {
+  background-color: red;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.main_page .dark:hover {
+  -webkit-box-shadow: 4px 4px 10px purple, -4px -4px 10px purple;
+          box-shadow: 4px 4px 10px purple, -4px -4px 10px purple;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.vador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #262520;
+}
+
+.vador .sabre {
+  position: relative;
+  top: 280px;
+  height: 65px;
+  width: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#808080), to(#ededed));
+  background: linear-gradient(90deg, #808080, #ededed);
+}
+
+.vador .sabre .poignée__haut {
+  position: absolute;
+  top: -6px;
+  height: 6px;
+  width: 20px;
+  background-color: #595959;
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+}
+
+.vador .sabre .poignée__bas {
+  position: absolute;
+  bottom: -6px;
+  height: 6px;
+  width: 20px;
+  background-color: #595959;
+  border-radius: 0 0 8px 8px;
+}
+
+.vador .sabre .bouton {
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  height: 15px;
+  width: 4px;
+  background-color: #db0000;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.vador .sabre .bouton:active + .lame {
+  -webkit-transform: scaleY(100%);
+          transform: scaleY(100%);
+}
+
+.vador .sabre .lame {
+  position: absolute;
+  top: -247px;
+  right: 5px;
+  height: 240px;
+  width: 7px;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 20px 20px 0 0;
+  -webkit-box-shadow: 3px 0 8px red, -3px 0 8px red;
+          box-shadow: 3px 0 8px red, -3px 0 8px red;
+  z-index: 0;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  -webkit-transform: scaleY(0%);
+          transform: scaleY(0%);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+}
+
+.vador p {
+  font-size: 20px;
+  color: red;
+  word-wrap: break-word;
+  margin-top: 340px;
+}
+
+.yoda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.yoda .sabre {
+  position: relative;
+  top: 280px;
+  height: 65px;
+  width: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#808080), to(#ededed));
+  background: linear-gradient(90deg, #808080, #ededed);
+}
+
+.yoda .sabre .poignée__haut {
+  position: absolute;
+  top: -6px;
+  height: 6px;
+  width: 20px;
+  background-color: #595959;
+  border-radius: 8px 8px 0 0;
+  z-index: 1;
+}
+
+.yoda .sabre .poignée__bas {
+  position: absolute;
+  bottom: -6px;
+  height: 6px;
+  width: 20px;
+  background-color: #595959;
+  border-radius: 0 0 8px 8px;
+}
+
+.yoda .sabre .bouton {
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  height: 15px;
+  width: 4px;
+  background-color: #db0000;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.yoda .sabre .bouton:active + .lame {
+  -webkit-transform: scaleY(100%);
+          transform: scaleY(100%);
+}
+
+.yoda .sabre .lame {
+  position: absolute;
+  top: -247px;
+  right: 5px;
+  height: 240px;
+  width: 7px;
+  background-color: white;
+  border: 1px solid green;
+  border-radius: 20px 20px 0 0;
+  -webkit-box-shadow: 3px 0 8px green, -3px 0 8px green;
+          box-shadow: 3px 0 8px green, -3px 0 8px green;
+  z-index: 0;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  -webkit-transform: scaleY(0%);
+          transform: scaleY(0%);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+}
+
+.yoda p {
+  font-size: 20px;
+  color: green;
+  word-wrap: break-word;
+  margin-top: 340px;
+}
+/*# sourceMappingURL=styles.css.map */

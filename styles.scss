@@ -1,0 +1,174 @@
+.main_page {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #262520;
+    a {
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            font-size: 105%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    .light {
+        color: white;
+        background-color: green;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-top: 50px;
+        &:hover {
+            box-shadow: 4px 4px 10px white, -4px -4px 10px white;
+        }
+    }
+    .dark {
+        background-color: red;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-top: 50px;
+        &:hover {
+            box-shadow: 4px 4px 10px purple, -4px -4px 10px purple;
+        }
+    }
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.vador {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262520;
+    .sabre {
+        position: relative;
+        top: 280px;
+        height: 65px;
+        width: 20px;
+        background: linear-gradient(90deg, #808080, #ededed);
+        .poignée__haut {
+            position: absolute;
+            top: -6px;
+            height: 6px;
+            width: 20px;
+            background-color: #595959;
+            border-radius: 8px 8px 0 0;
+            z-index: 1;
+        }
+        .poignée__bas {
+            position: absolute;
+            bottom: -6px;
+            height: 6px;
+            width: 20px;
+            background-color: #595959;
+            border-radius: 0 0 8px 8px;
+        }
+        .bouton {
+            position: absolute;
+            top: 15px;
+            right: -1px;
+            height: 15px;
+            width: 4px;
+            background-color: #db0000;
+            z-index: 1;
+            cursor: pointer;
+            &:active + .lame {
+                transform: scaleY(100%);
+            }
+        }
+        .lame {
+            position: absolute;
+            top: -247px;
+            right: 5px;
+            height: 240px;
+            width: 7px;
+            background-color: white;
+            border: 1px solid red;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 3px 0 8px red, -3px 0 8px red;
+            z-index: 0;
+            filter: blur(1px);
+            transform: scaleY(0%);
+            transform-origin: bottom;
+            transition: transform 100ms ease-in-out;
+        }
+    }
+    p {
+        font-size: 20px;
+        color: red;
+        word-wrap: break-word;
+        margin-top: 340px;
+    }
+}
+.yoda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    .sabre {
+        position: relative;
+        top: 280px;
+        height: 65px;
+        width: 20px;
+        background: linear-gradient(90deg, #808080, #ededed);
+        .poignée__haut {
+            position: absolute;
+            top: -6px;
+            height: 6px;
+            width: 20px;
+            background-color: #595959;
+            border-radius: 8px 8px 0 0;
+            z-index: 1;
+        }
+        .poignée__bas {
+            position: absolute;
+            bottom: -6px;
+            height: 6px;
+            width: 20px;
+            background-color: #595959;
+            border-radius: 0 0 8px 8px;
+        }
+        .bouton {
+            position: absolute;
+            top: 15px;
+            right: -1px;
+            height: 15px;
+            width: 4px;
+            background-color: #db0000;
+            z-index: 1;
+            cursor: pointer;
+            &:active + .lame {
+                transform: scaleY(100%);
+            }
+        }
+        .lame {
+            position: absolute;
+            top: -247px;
+            right: 5px;
+            height: 240px;
+            width: 7px;
+            background-color: white;
+            border: 1px solid green;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 3px 0 8px green, -3px 0 8px green;
+            z-index: 0;
+            filter: blur(1px);
+            transform: scaleY(0%);
+            transform-origin: bottom;
+            transition: transform 100ms ease-in-out;
+        }
+    }
+    p {
+        font-size: 20px;
+        color: green;
+        word-wrap: break-word;
+        margin-top: 340px;
+    }
+}
+
