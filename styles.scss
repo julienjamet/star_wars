@@ -23,7 +23,7 @@
         border-radius: 20px;
         margin-top: 50px;
         box-shadow: 0 0 0 white, 0 0 0 white;
-        transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-in-out 1600ms 400ms;
+        transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-out 1600ms;
         &:hover {
             background: radial-gradient(white, green);
             color: green;
@@ -39,7 +39,7 @@
         border-radius: 20px;
         margin-top: 50px;
         box-shadow: 0 0 0 red, 0 0 0 red;
-        transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-in-out 1600ms 400ms;
+        transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-out 1600ms;
         &:hover {
             background: radial-gradient(black, red);
             color: red;
