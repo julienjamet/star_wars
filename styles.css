@@ -1,4 +1,109 @@
 @charset "UTF-8";
+@-webkit-keyframes start_light {
+  0% {
+    opacity: 0;
+    color: white;
+    background: green;
+    -webkit-box-shadow: 0px 0px 20px green, -0px -0px 20px green;
+            box-shadow: 0px 0px 20px green, -0px -0px 20px green;
+  }
+  50%, 100% {
+    opacity: 1;
+    -webkit-box-shadow: 8px 8px 20px green, -8px -8px 20px green;
+            box-shadow: 8px 8px 20px green, -8px -8px 20px green;
+  }
+  100% {
+    color: green;
+    background: whitesmoke;
+    -webkit-box-shadow: 16px 16px 40px green, -16px -16px 40px green;
+            box-shadow: 16px 16px 40px green, -16px -16px 40px green;
+  }
+}
+@keyframes start_light {
+  0% {
+    opacity: 0;
+    color: white;
+    background: green;
+    -webkit-box-shadow: 0px 0px 20px green, -0px -0px 20px green;
+            box-shadow: 0px 0px 20px green, -0px -0px 20px green;
+  }
+  50%, 100% {
+    opacity: 1;
+    -webkit-box-shadow: 8px 8px 20px green, -8px -8px 20px green;
+            box-shadow: 8px 8px 20px green, -8px -8px 20px green;
+  }
+  100% {
+    color: green;
+    background: whitesmoke;
+    -webkit-box-shadow: 16px 16px 40px green, -16px -16px 40px green;
+            box-shadow: 16px 16px 40px green, -16px -16px 40px green;
+  }
+}
+
+@-webkit-keyframes start_dark {
+  0% {
+    opacity: 0;
+    color: black;
+    background: red;
+    -webkit-box-shadow: 0px 0px 20px red, -0px -0px 20px red;
+            box-shadow: 0px 0px 20px red, -0px -0px 20px red;
+  }
+  50%, 100% {
+    opacity: 1;
+    -webkit-box-shadow: 8px 8px 20px red, -8px -8px 20px red;
+            box-shadow: 8px 8px 20px red, -8px -8px 20px red;
+  }
+  100% {
+    color: red;
+    background: black;
+    -webkit-box-shadow: 16px 16px 40px red, -16px -16px 40px red;
+            box-shadow: 16px 16px 40px red, -16px -16px 40px red;
+  }
+}
+
+@keyframes start_dark {
+  0% {
+    opacity: 0;
+    color: black;
+    background: red;
+    -webkit-box-shadow: 0px 0px 20px red, -0px -0px 20px red;
+            box-shadow: 0px 0px 20px red, -0px -0px 20px red;
+  }
+  50%, 100% {
+    opacity: 1;
+    -webkit-box-shadow: 8px 8px 20px red, -8px -8px 20px red;
+            box-shadow: 8px 8px 20px red, -8px -8px 20px red;
+  }
+  100% {
+    color: red;
+    background: black;
+    -webkit-box-shadow: 16px 16px 40px red, -16px -16px 40px red;
+            box-shadow: 16px 16px 40px red, -16px -16px 40px red;
+  }
+}
+
+@-webkit-keyframes attraction {
+  from {
+    -webkit-transform: translateX(-2000px) rotate(1turn);
+            transform: translateX(-2000px) rotate(1turn);
+  }
+  to {
+    -webkit-transform: translate(0) rotate(10turn);
+            transform: translate(0) rotate(10turn);
+  }
+}
+
+@keyframes attraction {
+  from {
+    -webkit-transform: translateX(-2000px) rotate(1turn);
+            transform: translateX(-2000px) rotate(1turn);
+  }
+  to {
+    -webkit-transform: translate(0) rotate(10turn);
+            transform: translate(0) rotate(10turn);
+  }
+}
+
 .main_page {
   max-width: 1000px;
   margin: 0 auto 0 auto;
@@ -35,17 +140,14 @@
   margin-top: 50px;
   -webkit-box-shadow: 0 0 0 white, 0 0 0 white;
           box-shadow: 0 0 0 white, 0 0 0 white;
-  -webkit-transition: color 800ms ease-out, background-color 800ms 400ms ease-out, -webkit-box-shadow ease-out 1600ms;
-  transition: color 800ms ease-out, background-color 800ms 400ms ease-out, -webkit-box-shadow ease-out 1600ms;
-  transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-out 1600ms;
-  transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-out 1600ms, -webkit-box-shadow ease-out 1600ms;
+  -webkit-animation: start_light 3000ms ease-in-out forwards;
+          animation: start_light 3000ms ease-in-out forwards;
+  -webkit-transition: letter-spacing 1000ms ease-out;
+  transition: letter-spacing 1000ms ease-out;
 }
 
 .main_page .light:hover {
-  background: radial-gradient(white, green);
-  color: green;
-  -webkit-box-shadow: 8px 8px 20px green, -8px -8px 20px green;
-          box-shadow: 8px 8px 20px green, -8px -8px 20px green;
+  letter-spacing: 1px;
 }
 
 .main_page .dark {
@@ -55,20 +157,19 @@
   padding: 15px;
   border: 1px solid black;
   border-radius: 20px;
-  margin-top: 50px;
+  margin-top: 100px;
   -webkit-box-shadow: 0 0 0 red, 0 0 0 red;
           box-shadow: 0 0 0 red, 0 0 0 red;
-  -webkit-transition: color 800ms ease-out, background-color 800ms 400ms ease-out, -webkit-box-shadow ease-out 1600ms;
-  transition: color 800ms ease-out, background-color 800ms 400ms ease-out, -webkit-box-shadow ease-out 1600ms;
-  transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-out 1600ms;
-  transition: color 800ms ease-out, background-color 800ms 400ms ease-out, box-shadow ease-out 1600ms, -webkit-box-shadow ease-out 1600ms;
+  -webkit-transition: color 1200ms;
+  transition: color 1200ms;
+  -webkit-animation: start_dark 3000ms 1200ms both ease-in-out;
+          animation: start_dark 3000ms 1200ms both ease-in-out;
+  -webkit-transition: letter-spacing 1000ms ease-out;
+  transition: letter-spacing 1000ms ease-out;
 }
 
 .main_page .dark:hover {
-  background: radial-gradient(black, red);
-  color: red;
-  -webkit-box-shadow: 8px 8px 20px red, -8px -8px 20px red;
-          box-shadow: 8px 8px 20px red, -8px -8px 20px red;
+  letter-spacing: 1px;
 }
 
 body {
@@ -99,6 +200,8 @@ body {
   width: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#808080), to(#ededed));
   background: linear-gradient(90deg, #808080, #ededed);
+  -webkit-animation: attraction 1400ms ease-out;
+          animation: attraction 1400ms ease-out;
 }
 
 .vador .sabre .poignée__haut {
@@ -191,6 +294,8 @@ body {
   width: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#808080), to(#ededed));
   background: linear-gradient(90deg, #808080, #ededed);
+  -webkit-animation: attraction 1400ms ease-out;
+          animation: attraction 1400ms ease-out;
 }
 
 .yoda .sabre .poignée__haut {
