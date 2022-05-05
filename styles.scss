@@ -2,34 +2,34 @@
     0% {
         opacity: 0;
         color: white;
-        background: radial-gradient();
+        background: radial-gradient(green, green);
         box-shadow: 0px 0px 20px green, -0px -0px 20px green;
     }
     50%,100% {
         opacity: 1;
-        box-shadow: 16px 16px 20px green, -16px -16px 20px green;
+        box-shadow: 8px 8px 20px green, -8px -8px 20px green;
     }
     100% {
         color: green;
-        background: whitesmoke;
-        box-shadow: 24px 24px 40px green, -24px -24px 40px green;
+        background: radial-gradient(white, green);
+        box-shadow: 12px 12px 40px green, -12px -12px 40px green;
     }
 }
 @keyframes start_dark {
     0% {
         opacity: 0;
         color: black;
-        background: red;
+        background: radial-gradient(red, red);
         box-shadow: 0px 0px 20px red, -0px -0px 20px red;
     }
     50%,100% {
         opacity: 1;
-        box-shadow: 16px 16px 16px red, -16px -16px 20px red;
+        box-shadow: 8px 8px 16px red, -8px -8px 20px red;
     }
     100% {
         color: red;
-        background: black;
-        box-shadow: 24px 24px 40px red, -24px -24px 40px red;
+        background: radial-gradient(black, red);
+        box-shadow: 12px 12px 40px red, -12px -12px 40px red;
     }
 }
 @keyframes attraction {
