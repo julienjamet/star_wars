@@ -2,7 +2,7 @@
     0% {
         opacity: 0;
         color: white;
-        background: radial-gradient(green, green);
+        background: green;
         box-shadow: 0px 0px 20px green, -0px -0px 20px green;
     }
     50%,100% {
@@ -11,7 +11,7 @@
     }
     100% {
         color: green;
-        background: radial-gradient(white, green);
+        background: #dbd9d9;
         box-shadow: 12px 12px 40px green, -12px -12px 40px green;
     }
 }
@@ -19,7 +19,7 @@
     0% {
         opacity: 0;
         color: black;
-        background: radial-gradient(red, red);
+        background: red;
         box-shadow: 0px 0px 20px red, -0px -0px 20px red;
     }
     50%,100% {
@@ -28,7 +28,7 @@
     }
     100% {
         color: red;
-        background: radial-gradient(black, red);
+        background: black;
         box-shadow: 12px 12px 40px red, -12px -12px 40px red;
     }
 }
@@ -38,6 +38,82 @@
     }
     to {
         transform: translate(0) rotate(10turn);
+    }
+}
+@keyframes attraction_dark {
+    0% {
+        transform: translateY(-1000px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+    81% {
+        transform: translateX(-10px);
+    }
+    82% {
+        transform: translateX(10px);
+    }
+    83% {
+        transform: translateX(-10px);
+    }
+    84% {
+        transform: translateX(10px);
+    }
+    85% {
+        transform: translateX(-10px);
+    }
+    86% {
+        transform: translateX(10px);
+    }
+    87% {
+        transform: translateX(-10px);
+    }
+    88% {
+        transform: translateX(10px);
+    }
+    89% {
+        transform: translateX(-10px);
+    }
+    90% {
+        transform: translateX(10px);
+    }
+    91% {
+        transform: translateX(-10px);
+    }
+    92% {
+        transform: translateX(10px);
+    }
+    93% {
+        transform: translateX(-10px);
+    }
+    94% {
+        transform: translateX(10px);
+    }
+    95% {
+        transform: translateX(-10px);
+    }
+    96% {
+        transform: translateX(10px);
+    }
+    97% {
+        transform: translateX(-5px);
+    }
+    98% {
+        transform: translateX(5px);
+    }
+    99% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes delay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 .main_page {
@@ -103,7 +179,7 @@ body {
         height: 65px;
         width: 20px;
         background: linear-gradient(90deg, #808080, #ededed);
-        animation: attraction 1400ms ease-out;
+        animation: attraction_dark 1400ms cubic-bezier(0,1.75,1,-0.1);
         .poignée__haut {
             position: absolute;
             top: -6px;
@@ -121,7 +197,7 @@ body {
             background-color: #595959;
             border-radius: 0 0 8px 8px;
         }
-        .bouton {
+        a {
             position: absolute;
             top: 15px;
             right: -1px;
@@ -130,7 +206,7 @@ body {
             background-color: #db0000;
             z-index: 1;
             cursor: pointer;
-            &:active + .lame {
+            &:focus + .lame {
                 transform: scaleY(100%);
             }
         }
@@ -156,6 +232,7 @@ body {
         color: red;
         word-wrap: break-word;
         margin-top: 340px;
+        animation: delay 1800ms 1400ms backwards ease-in-out;
     }
 }
 .yoda {
@@ -197,7 +274,7 @@ body {
             background-color: #db0000;
             z-index: 1;
             cursor: pointer;
-            &:active + .lame {
+            &:focus + .lame {
                 transform: scaleY(100%);
             }
         }
@@ -223,6 +300,7 @@ body {
         color: green;
         word-wrap: break-word;
         margin-top: 340px;
+        animation: delay 1800ms 1200ms backwards ease-in-out;
     }
 }
 
